@@ -7,12 +7,6 @@ if (isset($conexao)){
 
 include("menu.php");
 
-class usuario {
-    public int $cpf;
-    public ?string $nome;
-    public ?string $data_nascimento;
-}
-
 $sqlUsuarios = mysqli_query($conexao, "select * from usuario") or die("Erro!");
 
 $numLinhas =  mysqli_num_rows($sqlUsuarios);
